@@ -7,7 +7,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -117,6 +116,31 @@ body {
 }
 .header .contact-form {
 	display: none;
+}
+.carousel img {
+	width: 400px;
+	height: 200px;
+}
+.carousel .slick-dots {
+	display: flex;
+	justify-content: center;
+}
+.carousel .slick-dots li {
+	margin: 0 5px;
+}
+.carousel .slick-dots li button {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	background: #fff;
+	padding: 0;
+	font-size: 0;
+	text-indent: -9999px;
+	outline: 0;
+}
+.carousel .slick-dots li.slick-active button {
+	background: #000;
 }
 
 
