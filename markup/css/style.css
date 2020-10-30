@@ -81,6 +81,7 @@ body {
 	text-decoration: underline;
 	color: #ccc;
 }
+/*   burger    */
 .btn-burger {
 	width: 48px;
 	height: 31px;
@@ -99,6 +100,7 @@ body {
 	height: 5px;
 	background: #000;
 	display: block;
+	transition: .25s ease-in-out;
 }
 .btn-burger-line:before,
 .btn-burger-line:after {
@@ -110,6 +112,7 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
+	transition: .25s ease-in-out;
 }
 .btn-burger-line:after {
 	top: 26px;
@@ -117,9 +120,21 @@ body {
 .header .contact-form {
 	display: none;
 }
+.list {
+	display: none;
+}
+.send {
+	display: none;
+}
+
+/*    carousel    */
+.carousel .slick-list {
+	margin: 0 30px;
+}
 .carousel img {
 	width: 400px;
 	height: 200px;
+	margin: auto;
 }
 .carousel .slick-dots {
 	display: flex;
@@ -136,21 +151,90 @@ body {
 	background: #fff;
 	padding: 0;
 	font-size: 0;
-	text-indent: -9999px;
 	outline: 0;
 }
 .carousel .slick-dots li.slick-active button {
 	background: #000;
 }
 
+/* main */
+.main {
+    display: flex;
+    justify-content: center;     
+}
+.main-content {
+	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+}
+.about {
+    font-size: 28px;
+    text-align: center;
+    margin: 80px 0;
+}
+.headline {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 16px 0 14px 0;
+}
+.box {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+.box-history {
+    width: 500px;
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    background: #000;
+}
+.box-text {
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+}
+.box-year {
+    font-size: 48px;
+}
+.contact-form {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin: 47px 0 100px 0
+}
+.btn { 
+  font-size: 28px;
+  width: 200px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 13px 59px;
+  outline: none;
+  border: none;
+}
+.textarea-field {
+  font-size: 18px;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
 
 
 
 /* tablet */
-
 @media only screen
 and (min-width: 769px)
 and (max-width: 1200px) {
+
+/*header+carousel*/
 	.btn-burger {
 		display: block;
 	}
@@ -159,9 +243,18 @@ and (max-width: 1200px) {
 	}
 	.menu-open .header {
 		background: #000;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+	}
+	.logo {
+		margin: 0 auto 16px;
 	}
 	.menu-open .logo svg * {
 		fill: #fff;
+	}
+	.menu-open .logo {
+		margin: 0 auto 124px;
 	}
 	.menu-open .btn-burger .btn-burger-line,
 	.menu-open .btn-burger .btn-burger-line:before {
@@ -180,32 +273,137 @@ and (max-width: 1200px) {
 		display: block;
 	}
 	
+/*  contact header */
+	.menu-open .input-form {
+		border: 1px solid #fff;
+  		display: flex;
+  		justify-content: space-between;
+		align-items: center;
+		padding: 30px 30px;
+		margin: 0 52px 76px;
+	}
+	.contact-form-burger {
+		font-size: 18px;
+		width: 300px;
+		background: none;
+		vertical-align: middle;
+  		resize: none;
+  		border: none;
+  		outline: none;
+  		color: #fff;
+	}
+	.menu-open .send {
+		display: inline-block;
+		font-size: 28px;
+  		background: #fff;
+  		color: #000;
+  		border-radius: 8px;
+  		padding: 13px 59px;
+  		outline: none;
+  		border: none;
+	}
+	.menu-open .carousel{
+		padding: 192px 0 0;
+	}
+
+/* navigation-open-burger */
+	.menu-open .list {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto 80px;
+	}
+	.menu-open .list-item {
+		margin: 0 40px;
+	}
+	.menu-open .list-link {
+		font-size: 20px;
+		color: #fff;
+		text-decoration: none;
+	}
+	.menu-open .list-link:hover {
+		text-decoration: underline;
+	}
+/*header+carousel end*/
+
+	/* main */
+	.main-content {
+	    max-width: 928px;
+	}
+	.about {
+	    font-size: 20px;
+	    margin: 80px 52px;
+	}
+	.box {
+		display: block;
+		margin: 0;
+	}
+	.headline {
+		font-size: 28px;
+	}
+	.box-history {
+		width: 928px;
+	    padding: 48px;
+    	margin: 32px 0;
+	    background: #000;
+	}
 }
+
+
 
 /* mobile */
 
 @media only screen
 and (min-width: 0)
 and (max-width: 768px) {
+	body .menu-open {
+		position: fixed;
+	}
+
+/*header+carousel*/
 	.btn-burger {
 		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 23px;
+		left: 20px;
 	}
 	.btn-burger-line,
 	.btn-burger-line:before,
 	.btn-burger-line:after {
 		background: #fff;
+		display: block;
+		z-index: 1;
 	}
 	.nav {
 		display: none;
 	}
+	.header {
+		background: #000;
+		padding: 0;
+	}
 	.menu-open .header {
 		background: #000;
+		height: 100vh;
+		width: 100%;		
+		position: absolute;
+		z-index: 1;	
+		overflow: auto;	
 	}
-	.logo svg * {
-		margin: 0 0 80px auto;
+	.logo {		
+		display: none;
 	}
 	.logo svg * {
 		fill: #fff;
+	}
+	.menu-open .logo svg * {
+		fill: #fff;
+	}
+	.menu-open .logo {		
+		display: block;		
+		margin: 24px 255px;
+	}
+	.menu-open .header .contact-form {
+		display: block;
 	}
 	.menu-open .btn-burger .btn-burger-line,
 	.menu-open .btn-burger .btn-burger-line:before {
@@ -220,8 +418,60 @@ and (max-width: 768px) {
 	.menu-open .btn-burger .btn-burger-line:after {
 		display: none;
 	}
-	.menu-open .header .contact-form {
-		display: block;
+	.carousel .slick-list {
+	    margin: 0;
 	}
-	
+    .menu-open .header .contact-form {
+	    display: block;
+    }
+    .menu-open .list {    	
+	    display: flex;
+	    justify-content: center;
+	    margin: 48px auto 0 20px;
+	    flex-direction: column; 	    
+    }
+    .menu-open .list-link {
+		font-size: 20px;
+		color: #fff;
+		text-decoration: none;
+	}
+	.menu-open .list-link:hover {
+		text-decoration: underline;
+	}
+    .menu-open .list-item {
+		margin: 0 auto 48px 20px;
+	}      
+    .menu-open .contact-form {		
+		height: 150px;
+		width: 335px;
+		background: none;
+		border: 1px solid #fff;
+		margin: 42px auto 20px 20px;
+		padding: 20px 20px 101px 20px;		
+	}
+	.contact-form-burger {
+		font-size: 18px;
+		width: 295px;
+		height: 29px;
+		background: none;
+		vertical-align: middle;
+  		resize: none;
+  		border: none;
+  		outline: none;
+  		color: #fff;
+  		text-align: center;
+	}
+	.menu-open .send {		
+		display: block;
+		font-size: 24px;
+  		width: 335px;
+  		height: 60px;
+  		background: #fff;
+  		color: #000;
+  		border-radius: 8px;  		
+  		outline: none;
+  		border: none;
+  		margin: 0 auto 60px 20px;
+	}
+	/*header+carousel end*/		
 }
