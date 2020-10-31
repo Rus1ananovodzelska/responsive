@@ -129,7 +129,7 @@ body {
 
 /*    carousel    */
 .carousel .slick-list {
-	margin: 0 30px;
+	margin: 0 30px 49px;
 }
 .carousel img {
 	width: 400px;
@@ -247,6 +247,9 @@ and (max-width: 1200px) {
 		z-index: 1;
 		width: 100%;
 	}
+	.header {
+		padding: 48px 0;
+	}
 	.logo {
 		margin: 0 auto 16px;
 	}
@@ -280,7 +283,7 @@ and (max-width: 1200px) {
   		justify-content: space-between;
 		align-items: center;
 		padding: 30px 30px;
-		margin: 0 52px 76px;
+		margin: 0 52px 108px;
 	}
 	.contact-form-burger {
 		font-size: 18px;
@@ -292,7 +295,7 @@ and (max-width: 1200px) {
   		outline: none;
   		color: #fff;
 	}
-	.menu-open .send {
+	.menu-open .send-burger {
 		display: inline-block;
 		font-size: 28px;
   		background: #fff;
@@ -400,7 +403,7 @@ and (max-width: 768px) {
 	}
 	.menu-open .logo {		
 		display: block;		
-		margin: 24px 315px;
+		margin: 24px 255px;
 	}
 	.menu-open .header .contact-form {
 		display: block;
@@ -442,16 +445,15 @@ and (max-width: 768px) {
 		margin: 0 auto 48px 20px;
 	}      
     .menu-open .contact-form {		
-		height: 150px;
-		width: 100%;
-		background: none;
+		max-height: 150px;
+		max-width: 335px;
 		border: 1px solid #fff;
 		margin: 42px auto 20px 20px;
 		padding: 20px 20px 101px 20px;		
 	}
 	.contact-form-burger {
 		font-size: 18px;
-		width: 100%;
+		width: 295px;
 		height: 29px;
 		background: none;
 		vertical-align: middle;
@@ -464,7 +466,7 @@ and (max-width: 768px) {
 	.menu-open .send {		
 		display: block;
 		font-size: 24px;
-  		width: 100%;
+  		width: 335px;
   		height: 60px;
   		background: #fff;
   		color: #000;
@@ -493,6 +495,8 @@ and (max-width: 768px) {
 	}
 	.headline {
 		font-size: 20px;
+		width: 335px;
+		margin: 0 20px;
 	}
 	.box-year {
     	font-size: 24px;
@@ -501,20 +505,21 @@ and (max-width: 768px) {
 	    font-size: 16px;
 	}
 	.box-history {
-		width: 375px;
+		width: 335px;/**/
 	    padding: 20px;
-    	margin: 24px 0;
+    	margin: 24px 20px;/**/
 	    background: #000;
 	}
 	.contact-form {
+		width: 335px;        
 		border: none;
 		display: block;
-		padding: 24px 0 0 0;
-		margin: 0;
+		padding: 0;
+		margin: 22px 20px 0 20px;
 	}
 	.send { 
 		font-size: 24px;
-		width: 100%;
+		width: 335px;
 		background: #000;
 		color: #fff;
 		border-radius: 8px;
@@ -524,7 +529,7 @@ and (max-width: 768px) {
 		margin: 19px 0 50px 0;
 	}
 	.textarea-field {
-	    width: 100%;
+	    width: 335px;
 		padding: 20px 20px 101px;
 		resize: none;
 		border: 1px solid #000;
