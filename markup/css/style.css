@@ -123,7 +123,7 @@ body {
 .list {
 	display: none;
 }
-.send {
+.input-form .send {
 	display: none;
 }
 
@@ -195,7 +195,7 @@ body {
 }
 .box-text {
     font-size: 18px;
-    line-height: 22px;
+    line-height: normal;
     color: #fff;
 }
 .box-year {
@@ -209,9 +209,9 @@ body {
   padding: 30px;
   margin: 47px 0 100px 0
 }
-.btn { 
+.send { 
+  display: inline-block;
   font-size: 28px;
-  width: 200px;
   background: #000;
   color: #fff;
   border-radius: 8px;
@@ -331,7 +331,7 @@ and (max-width: 1200px) {
 	}
 	.about {
 	    font-size: 20px;
-	    margin: 80px 52px;
+	    margin: 47px 52px;
 	}
 	.box {
 		display: block;
@@ -400,7 +400,7 @@ and (max-width: 768px) {
 	}
 	.menu-open .logo {		
 		display: block;		
-		margin: 24px 255px;
+		margin: 24px 315px;
 	}
 	.menu-open .header .contact-form {
 		display: block;
@@ -443,7 +443,7 @@ and (max-width: 768px) {
 	}      
     .menu-open .contact-form {		
 		height: 150px;
-		width: 335px;
+		width: 100%;
 		background: none;
 		border: 1px solid #fff;
 		margin: 42px auto 20px 20px;
@@ -451,7 +451,7 @@ and (max-width: 768px) {
 	}
 	.contact-form-burger {
 		font-size: 18px;
-		width: 295px;
+		width: 100%;
 		height: 29px;
 		background: none;
 		vertical-align: middle;
@@ -464,7 +464,7 @@ and (max-width: 768px) {
 	.menu-open .send {		
 		display: block;
 		font-size: 24px;
-  		width: 335px;
+  		width: 100%;
   		height: 60px;
   		background: #fff;
   		color: #000;
@@ -473,5 +473,62 @@ and (max-width: 768px) {
   		border: none;
   		margin: 0 auto 60px 20px;
 	}
-	/*header+carousel end*/		
+	.menu-open .input-form {
+		max-width: 395px;
+	}
+	
+	/*header+carousel end*/	
+
+	/* main */
+	.main-content {
+	    max-width: 375px;
+	}
+	.about {
+	    font-size: 16px;
+	    margin: 23px 20px;
+	}
+	.box {
+		display: block;
+		margin: 0;
+	}
+	.headline {
+		font-size: 20px;
+	}
+	.box-year {
+    	font-size: 24px;
+	}
+	.box-text {
+	    font-size: 16px;
+	}
+	.box-history {
+		width: 375px;
+	    padding: 20px;
+    	margin: 24px 0;
+	    background: #000;
+	}
+	.contact-form {
+		border: none;
+		display: block;
+		padding: 24px 0 0 0;
+		margin: 0;
+	}
+	.send { 
+		font-size: 24px;
+		width: 100%;
+		background: #000;
+		color: #fff;
+		border-radius: 8px;
+		padding: 13px 59px;
+		outline: none;
+		border: none;
+		margin: 19px 0 50px 0;
+	}
+	.textarea-field {
+	    width: 100%;
+		padding: 20px 20px 101px;
+		resize: none;
+		border: 1px solid #000;
+		outline: none;
+		text-align: center;
+	}	
 }
