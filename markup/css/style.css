@@ -117,7 +117,7 @@ body {
 .btn-burger-line:after {
 	top: 26px;
 }
-.header .contact-form {
+.header .contact-form-burger {
 	display: none;
 }
 .list {
@@ -272,7 +272,7 @@ and (max-width: 1200px) {
 	.menu-open .btn-burger .btn-burger-line:after {
 		display: none;
 	}
-	.menu-open .header .contact-form {
+	.menu-open .header .contact-form-burger {
 		display: block;
 	}
 	
@@ -405,7 +405,7 @@ and (max-width: 768px) {
 		display: block;		
 		margin: 24px 255px;
 	}
-	.menu-open .header .contact-form {
+	.menu-open .header .contact-form-burger {
 		display: block;
 	}
 	.menu-open .btn-burger .btn-burger-line,
@@ -424,9 +424,6 @@ and (max-width: 768px) {
 	.carousel .slick-list {
 	    margin: 0;
 	}
-    .menu-open .header .contact-form {
-	    display: block;
-    }
     .menu-open .list {    	
 	    display: flex;
 	    justify-content: center;
@@ -442,18 +439,17 @@ and (max-width: 768px) {
 		text-decoration: underline;
 	}
     .menu-open .list-item {
-		margin: 0 auto 48px 20px;
+		margin: 0 auto 48px 0;
 	}      
-    .menu-open .contact-form {		
-		max-height: 150px;
-		max-width: 335px;
+    .menu-open .contact-form-burger {		
+		
 		border: 1px solid #fff;
 		margin: 42px auto 20px 20px;
 		padding: 20px 20px 101px 20px;		
 	}
 	.contact-form-burger {
 		font-size: 18px;
-		width: 295px;
+		width: 335px;
 		height: 29px;
 		background: none;
 		vertical-align: middle;
@@ -499,6 +495,7 @@ and (max-width: 768px) {
 		margin: 0 20px;
 	}
 	.box-year {
+		display: block;
     	font-size: 24px;
 	}
 	.box-text {
