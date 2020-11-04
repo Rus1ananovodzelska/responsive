@@ -210,7 +210,6 @@ body {
   margin: 47px 0 100px 0
 }
 .send { 
-  display: inline-block;
   font-size: 28px;
   background: #000;
   color: #fff;
@@ -218,6 +217,10 @@ body {
   padding: 13px 59px;
   outline: none;
   border: none;
+}
+.send:hover {
+  cursor: pointer;
+  font-size: 34px;
 }
 .textarea-field {
   font-size: 18px;
@@ -237,10 +240,21 @@ body {
 @media only screen
 and (min-width: 769px)
 and (max-width: 1200px) {
+	.wrapper {
+		padding: 0 48px;
+	}
+	.menu-open.wrapper {
+		padding: 192px 48px 0;
+	}
 
 /*header+carousel*/
+	
 	.btn-burger {
 		display: block;
+		left: 0;
+	}
+	.menu-open .btn-burger {
+		left: 32px;
 	}
 	.nav {
 		display: none;
@@ -248,6 +262,8 @@ and (max-width: 1200px) {
 	.menu-open .header {
 		background: #000;
 		position: absolute;
+		left: 0;
+		top: 0;
 		z-index: 1;
 		width: 100%;
 	}
@@ -291,13 +307,14 @@ and (max-width: 1200px) {
 	}
 	.contact-form-burger {
 		font-size: 18px;
-		width: 300px;
+		width: 100%;
 		background: none;
 		vertical-align: middle;
   		resize: none;
   		border: none;
   		outline: none;
   		color: #fff;
+  		overflow: hidden;
 	}
 	.contact-form-burger:focus {
 		background: #fff;
@@ -313,9 +330,11 @@ and (max-width: 1200px) {
   		outline: none;
   		border: none;
 	}
-	.menu-open .carousel{
-		padding: 192px 0 0;
+	.menu-open .send-burger:hover {
+	  cursor: pointer;
+	  font-size: 34px;
 	}
+	
 
 /* navigation-open-burger */
 	.menu-open .list {
@@ -352,7 +371,7 @@ and (max-width: 1200px) {
 		font-size: 28px;
 	}
 	.box-history {
-		width: 928px;
+		width: 100%;
 	    padding: 48px;
     	margin: 32px 0;
 	    background: #000;
@@ -378,6 +397,13 @@ and (max-width: 768px) {
 		top: 23px;
 		left: 20px;
 	}
+	.menu-open .btn-burger {
+		display: block;
+  	}
+	.btn-burger:hover {
+		-webkit-box-shadow: 0px 3px 9px 14px #000; 
+		box-shadow: 0px 3px 9px 14px #000;
+	}
 	.btn-burger-line,
 	.btn-burger-line:before,
 	.btn-burger-line:after {
@@ -395,10 +421,11 @@ and (max-width: 768px) {
 	.menu-open .header {
 		background: #000;
 		height: 100vh;
-		width: 100%;		
-		position: absolute;
-		z-index: 1;	
-		overflow: auto;	
+		max-width: 375px;
+		display: flex;		
+		flex-direction: row-reverse;
+  		flex-wrap: wrap;
+		overflow: hidden;	
 	}
 	.logo {		
 		display: none;
@@ -413,9 +440,11 @@ and (max-width: 768px) {
 		width: 80px;
 	    height: 48px;
 	}
-	.menu-open .logo {		
-		display: block;		
-		margin: 24px 275px;
+	.menu-open .header .logo {	
+		width: 80px;
+		height: 48px;	
+		display: flex;
+  		margin: 24px 20px auto 20px;
 	}
 	.menu-open .header .contact-form-burger {
 		display: block;
@@ -439,7 +468,8 @@ and (max-width: 768px) {
     .menu-open .list {    	
 	    display: flex;
 	    justify-content: center;
-	    margin: 48px auto 0 20px;
+	    margin: 0 auto 0 20px;
+	    padding-top: 116px;
 	    flex-direction: column; 	    
     }
     .menu-open .list-link {
@@ -452,23 +482,23 @@ and (max-width: 768px) {
 	}
     .menu-open .list-item {
 		margin: 0 auto 48px 0;
-	}      
-    .menu-open .contact-form-burger {		
-		border: 1px solid #fff;
-		margin: 42px auto 20px 20px;
-		padding: 20px 20px 101px 20px;		
-	}
-	.contact-form-burger {
-		font-size: 18px;
-		width: 335px;
-		height: 29px;
+	}  
+	.menu-open .input-form {
+		max-width: 375px;
+	}    
+    .contact-form-burger {
+    	font-size: 18px;
+		min-width: 335px;
 		background: none;
 		vertical-align: middle;
   		resize: none;
   		border: none;
   		outline: none;
   		color: #fff;
-  		text-align: center;
+  		text-align: center;		
+		border: 1px solid #fff;
+		margin: 42px 20px 20px 20px;
+		padding: 20px 20px 101px 20px;		
 	}
 	.contact-form-burger:focus {
 		background: #fff;
@@ -477,7 +507,7 @@ and (max-width: 768px) {
 	.menu-open .send {		
 		display: block;
 		font-size: 24px;
-  		width: 335px;
+  		max-width: 335px;
   		height: 60px;
   		background: #fff;
   		color: #000;
@@ -486,9 +516,11 @@ and (max-width: 768px) {
   		border: none;
   		margin: 0 auto 60px 20px;
 	}
-	.menu-open .input-form {
-		max-width: 395px;
+	.menu-open .send:hover {
+	  cursor: pointer;
+	  font-size: 30px;
 	}
+	
 	
 	/*header+carousel end*/	
 
@@ -506,7 +538,7 @@ and (max-width: 768px) {
 	}
 	.headline {
 		font-size: 20px;
-		width: 335px;
+		max-width: 335px;
 		margin: 0 20px;
 	}
 	.box-year {
@@ -517,31 +549,30 @@ and (max-width: 768px) {
 	    font-size: 16px;
 	}
 	.box-history {
-		width: 335px;/**/
+		max-width: 335px;/**/
 	    padding: 20px;
     	margin: 24px 20px;/**/
 	    background: #000;
 	}
 	.contact-form {
-		width: 335px;        
+		width: 100%;        
 		border: none;
 		display: block;
-		padding: 0;
-		margin: 22px 20px 0 20px;
+		padding: 22px 20px 0 20px;
+		margin: 0;
 	}
 	.send { 
 		font-size: 24px;
-		width: 335px;
+		width: 100%;
 		background: #000;
 		color: #fff;
 		border-radius: 8px;
-		padding: 13px 59px;
 		outline: none;
 		border: none;
-		margin: 19px 0 50px 0;
+		margin: 19px auto 50px;
 	}
 	.textarea-field {
-	    width: 335px;
+	    max-width: 335px;
 		padding: 20px 20px 101px;
 		resize: none;
 		border: 1px solid #000;
